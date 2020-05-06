@@ -5,7 +5,7 @@
     --do_lower_case=False \
     --crf=True \
     --do_train=True   \
-    --do_eval=True   \
+    --do_eval=false   \
     --do_predict=True \
     --data_dir=testdata   \
     --vocab_file=cased_L-12_H-768_A-12/vocab.txt  \
