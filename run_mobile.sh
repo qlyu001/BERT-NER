@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-  CUDA_VISIBLE_DEVICES=0 python BERT_NER.py\
+  CUDA_VISIBLE_DEVICES=0 python BERT_NER_MOBILE.py\
     --task_name="NER"  \
     --do_lower_case=False \
     --crf=True \
@@ -15,8 +15,8 @@
     --train_batch_size=32   \
     --learning_rate=2e-5   \
     --num_train_epochs=4.0   \
-    --output_dir=./output/result_dir
+    --output_dir=./output/mobile_result_dir
 
 
-perl conlleval.pl -d '\t' < ./output/result_dir/label_test.txt
+perl conlleval.pl -d '\t' < ./output/mobile_result_dir/label_test.txt
 
