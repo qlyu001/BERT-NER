@@ -224,7 +224,9 @@ class NerProcessor(DataProcessor):
         "[PAD]" for padding
         :return:
         """
-        return ["[PAD]","B-MISC", "I-MISC", "O", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC", "X","[CLS]","[SEP]"]
+        return ['X','[PAD]','O', 'B-Age', 'B-Sex', 'B-Clinical_event', 'B-Sign_symptom', 'B-Detailed_description', 'B-History', 'I-History', 'B-Lab_value', 'I-Lab_value', 'B-Diagnostic_procedure', 'I-Diagnostic_procedure', 'B-Biological_structure', 'I-Biological_structure', 'B-Coreference', 'I-Coreference', 'B-Texture', 'B-Biological_attribute', 'B-Severity', 'I-Sign_symptom', 'B-Activity', 'I-Activity', 'B-Duration', 'I-Duration', 'B-Shape', 'I-Shape', 'B-Therapeutic_procedure', 'B-Color', 'I-Detailed_description', 'I-Biological_attribute', 'B-Date', 'I-Date', 'B-Outcome', 'I-Outcome', 'I-Age', 'B-Personal_background', 'B-Medication', 'I-Medication', 'B-Dosage', 'I-Dosage', 'B-Nonbiological_location', 'B-Other_event', 'I-Other_event', 'B-Disease_disorder', 'I-Disease_disorder', 'I-Therapeutic_procedure', 'B-Administration', 'I-Administration', 'I-Clinical_event', 'B-Frequency', 'I-Nonbiological_location', 'B-Time', 'I-Time', 'B-Distance', 'I-Distance', 'B-Area', 'I-Area', 'B-Family_history', 'I-Family_history', 'B-Subject', 'B-Quantitative_concept', 'I-Severity', 'I-Subject', 'B-Volume', 'I-Volume', 'I-Texture', 'I-Quantitative_concept', 'I-Frequency', 'I-Color', 'B-Other_entity', 'B-Qualitative_concept', 'I-Other_entity', 'I-Personal_background', 'B-Height', 'I-Height', 'B-Weight', 'I-Weight', 'B-Occupation', 'I-Occupation', 'I-Qualitative_concept', 'B-Mass', 'I-Mass', '[CLS]', '[SEP]']
+
+        #return ["[PAD]","B-MISC", "I-MISC", "O", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC", "X","[CLS]","[SEP]"]
 
     def _create_example(self, lines, set_type):
         examples = []
